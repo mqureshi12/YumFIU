@@ -15,7 +15,7 @@
 
 #### Running the Project 
 Have XCode open in the background if it's not your primary IDE
-- npm start
-	- The terminal will give instructions on how to open different device simulators
-- npm run ios
+- npm run ios (usually only use this)
 	- Will automatically start the server and open the iOS simulator
+- npm start (if you want to test another OS)
+	- The terminal will give instructions on how to open different device simulators 
