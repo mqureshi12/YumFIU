@@ -13,7 +13,8 @@
 8. run "npm install -g expo-cli"
 9. run "npm run ios -- --reset-cache"
 
-#### Running the Project
+#### Running the Project 
+Have XCode open in the background if it's not your primary IDE
 - npm start
 	- The terminal will give instructions on how to open different device simulators
 - npm run ios
