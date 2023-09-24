@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeaderTabs from "../components/HeaderTabs";
 import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import SearchBar from "../components/SearchBar";
 import Categories from "../components/Categories";
+import { Divider } from "react-native-elements";
 import RestaurantItems, {
   localRestaurants,
 } from "../components/RestaurantItems";
@@ -11,9 +12,11 @@ const YELP_API_KEY = process.env.YELP_API_KEY;
 
 export default function Home() {
   const [restaurantData, setRestaurantData] = React.useState(localRestaurants);
+  const [city, setCity] = useState("Miami");
+  const [activeTab, setActiveTab] = useState("Delivery");
 
   const getRestaurantsFromYelp = () => {
-    // this is default Miami until we fix it for FIU restaurants
+    // This is default Miami until we update it for FIU restaurants
     const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=Miami`;
 
     const apiOptions = {
@@ -40,13 +43,16 @@ export default function Home() {
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
       <View style={{ backgroundColor: "white", padding: 15 }}>
-        <HeaderTabs />
-        <SearchBar />
+        <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
+        <SearchBar cityHandler={setCity} />
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
-        <RestaurantItems restaurantData={restaurantData} />
+        <RestaurantItems
+          restaurantData={restaurantData}
+        />
       </ScrollView>
+      <Divider width={1} />
     </SafeAreaView>
   );
 }

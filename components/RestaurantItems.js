@@ -4,31 +4,31 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 
 export const localRestaurants = [
   {
-    name: "Beachside Bar",
+    name: "8th St Campus Kitchen",
     image_url:
-      "https://static.onecms.io/wp-content/uploads/sites/9/2020/04/24/ppp-why-wont-anyone-rescue-restaurants-FT-BLOG0420.jpg",
-    categories: ["Cafe", "Bar"],
+      "https://housing.fiu.edu/_assets/images/8street-kitchen-1.jpg",
+    categories: ["Deals", "Graham Center"],
     price: "$$",
-    reviews: 1244,
-    rating: 4.5,
+    reviews: 1900,
+    rating: 4.2,
   },
   {
-    name: "Benihana",
+    name: "Chick-fil-A",
     image_url:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
-    categories: ["Cafe", "Bar"],
+      "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,w_1600/crm/miamifl/Chick-FIl-A_63A3A4B1-5056-A36A-0BA237B4421EA12E-63a3a1da5056a36_63a3ac90-5056-a36a-0b0cf52c84741e67.jpg",
+    categories: ["Fast Food", "PG5"],
     price: "$$",
     reviews: 1244,
-    rating: 3.7,
+    rating: 4.8,
   },
   {
-    name: "India's Grill",
+    name: "Half Moon Empanadas",
     image_url:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
-    categories: ["Indian", "Bar"],
+      "https://www.halfmoonempanadas.com/uploads/b/468e11e0-f6e1-11eb-bbbf-b7f7a55ee3a1/Half%20Moon%20Empanadas%20Post_ODEzNj.png",
+    categories: ["Soft Drinks", "PG6"],
     price: "$$",
     reviews: 700,
-    rating: 4.9,
+    rating: 3.5,
   },
 ];
 
@@ -39,7 +39,7 @@ export default function RestaurantItems({ navigation, ...props }) {
         <TouchableOpacity
           key={index}
           activeOpacity={1}
-          style={{ marginBottom: 30 }}
+          style={{ marginBottom: 1 }}
           onPress={() =>
             navigation.navigate("RestaurantDetail", {
               name: restaurant.name,
