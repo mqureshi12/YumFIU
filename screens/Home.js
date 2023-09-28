@@ -7,8 +7,7 @@ import { Divider } from "react-native-elements";
 import RestaurantItems, {
   localRestaurants,
 } from "../components/RestaurantItems";
-
-const YELP_API_KEY = process.env.YELP_API_KEY;
+import { YELP_API_KEY} from '@env';
 
 export default function Home() {
   const [restaurantData, setRestaurantData] = React.useState(localRestaurants);
@@ -17,7 +16,7 @@ export default function Home() {
 
   const getRestaurantsFromYelp = () => {
     // This is default Miami until we update it for FIU restaurants
-    const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=Miami`;
+    const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${city}`;
 
     const apiOptions = {
       headers: {

@@ -11,10 +11,12 @@
   "dependencies": {
     "@expo/webpack-config": "^19.0.0",
     "expo": "~49.0.10",
+    "expo-asset": "^8.10.1",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.72.4",
+    "react-native": "0.72.5",
+    "react-native-dotenv": "^3.4.9",
     "react-native-elements": "^3.4.3",
     "react-native-google-places-autocomplete": "^2.5.1",
     "react-native-vector-icons": "^10.0.0",
