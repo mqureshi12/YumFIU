@@ -8,6 +8,7 @@ import RestaurantItems, {
   localRestaurants,
 } from "../components/RestaurantItems";
 import { YELP_API_KEY} from '@env';
+import BottomTabs from "../components/BottomTabs";
 
 export default function Home() {
   const [restaurantData, setRestaurantData] = React.useState(localRestaurants);
@@ -52,6 +53,7 @@ export default function Home() {
         />
       </ScrollView>
       <Divider width={1} />
+      <BottomTabs />
     </SafeAreaView>
   );
 }

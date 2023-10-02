@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
-// import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export const localRestaurants = [
   {
@@ -72,7 +72,7 @@ const RestaurantImage = (props) => (
       style={{ width: "100%", height: 180 }}
     />
     <TouchableOpacity style={{ position: "absolute", right: 20, top: 20 }}>
-      {/* <MaterialCommunityIcons name="heart-outline" size={25} color="#fff" /> */}
+      <MaterialCommunityIcons name="heart-outline" size={25} color="#fff" />
     </TouchableOpacity>
   </>
 );
