@@ -34,6 +34,7 @@ export default function MenuItems() {
       {foods.map((food, index) => (
         <View key={index}>
           <View style={styles.menuItemStyle}>
+            <BouncyCheckbox iconStyle={{borderColor: 'lightgray', borderRadius: 5}} fillColor="green"/>
             <FoodInfo food={food} />
             <FoodImage food={food} />
           </View>
