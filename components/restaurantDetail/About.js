@@ -11,21 +11,22 @@ const yelpRestaurantInfo = {
   categories: [{ title: "Thai" }, { title: "Comfort Food" }],
 };
 
-const { name, image, price, reviews, rating, categories } = yelpRestaurantInfo;
-
-const formattedCategories = categories.map((cat) => cat.title).join(" • ");
-
-const description = `${formattedCategories} ${
-  price ? " • " + price : ""
-} • 🎫 • ${rating} ⭐ (${reviews}+)`;
-
 // const image =
 //   "https://housing.fiu.edu/_assets/images/50069871827_ca3ee7a1b0_c.jpg";
 
 // const title = "8th St Campus Kitchen";
 // const description = "Buffet • Comfort Food • $$ • 🎫 • 4.2 ⭐️ (1900+)";
 
-export default function About() {
+export default function About(props) {
+  const { name, image, price, reviews, rating, categories } = props.route.params;
+
+  const formattedCategories = categories.map((cat) => cat.title).join(" • ");
+  
+  const description = `${formattedCategories} ${
+    price ? " • " + price : ""
+  } • 🎫 • ${rating} ⭐ (${reviews}+)`;
+
+
   return (
     <View>
       <RestaurantImage image={image} />

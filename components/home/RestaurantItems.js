@@ -39,7 +39,7 @@ export default function RestaurantItems({ navigation, ...props }) {
         <TouchableOpacity
           key={index}
           activeOpacity={1}
-          style={{ marginBottom: 1 }}
+          style={{ marginBottom: 30 }}
           onPress={() =>
             navigation.navigate("RestaurantDetail", {
               name: restaurant.name,
@@ -52,6 +52,7 @@ export default function RestaurantItems({ navigation, ...props }) {
           }
         >
           <View
+            
             style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}
           >
             <RestaurantImage image={restaurant.image_url} />
