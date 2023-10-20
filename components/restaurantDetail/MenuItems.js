@@ -11,7 +11,7 @@ const foods = [
     description: "With butter lettuce, tomato and special sauce",
     price: "$13.50",
     image:
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.thewholesomedish.com%2Fthe-best-classic-lasagna%2F&psig=AOvVaw1OTJCifmO88A5isMRzYE6P&ust=1696638737312000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKi7__uV4IEDFQAAAAAdAAAAABAE",
+      "https://www.southernliving.com/thmb/x5xM5QvARl_og39g1jD1N1HfUlA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Extra_Easy_Lasagna_005_16x9-24d8c7469367440bb9aad73e9a83ded9.jpg",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function MenuItems() {
       {foods.map((food, index) => (
         <View key={index}>
           <View style={styles.menuItemStyle}>
-            <BouncyCheckbox iconStyle={{borderColor: 'lightgray', borderRadius: 5}} fillColor="green"/>
+            <BouncyCheckbox iconStyle={{borderColor: 'lightgray', borderRadius: 0}} fillColor="green"/>
             <FoodInfo food={food} />
             <FoodImage food={food} />
           </View>
@@ -46,7 +46,7 @@ export default function MenuItems() {
 }
 
 const FoodInfo = (props) => (
-  <View style={{ width: 240, justifyContent: "space-evenly" }}>
+  <View style={{ width: 200, justifyContent: "space-evenly" }}>
     <Text style={styles.titleStyle}>{props.food.title}</Text>
     <Text>{props.food.description}</Text>
     <Text>{props.food.price}</Text>
