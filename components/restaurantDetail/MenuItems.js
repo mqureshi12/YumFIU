@@ -28,17 +28,45 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function MenuItems() {
+export default function MenuItems({ restaurantName }) {
+  const dispatch = useDispatch();
+
+  const selectItem = (item, checkBoxValue) =>
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: {
+        ...item,
+        restaurantName: restaurantName,
+        checkBoxValue: checkBoxValue,
+      },
+    });
+
+  const cartItems = useSelector(
+    (state) => state.cartReducer.selectedItems.items
+  );
+
+  const isFoodInCart = (food, cartItems) =>
+    Boolean(cartItems.find((item) => item.title == food.title));
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       {foods.map((food, index) => (
         <View key={index}>
           <View style={styles.menuItemStyle}>
-            <BouncyCheckbox iconStyle={{borderColor: 'lightgray', borderRadius: 0}} fillColor="green"/>
+            <BouncyCheckbox
+              iconStyle={{ borderColor: "lightgray", borderRadius: 0 }}
+              fillColor="green"
+              onPress={(checkBoxValue) => selectItem(food, checkBoxValue)}
+              isChecked={isFoodInCart(food, cartItems)}
+            />
             <FoodInfo food={food} />
             <FoodImage food={food} />
           </View>
-          <Divider width={0.5} orientation="vertical" style={{marginHorizontal:26}}/>
+          <Divider
+            width={0.5}
+            orientation="vertical"
+            style={{ marginHorizontal: 26 }}
+          />
         </View>
       ))}
     </ScrollView>
