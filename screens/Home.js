@@ -16,7 +16,6 @@ export default function Home({navigation}) {
   const [activeTab, setActiveTab] = useState("Delivery");
 
   const getRestaurantsFromYelp = () => {
-    // This is default Miami until we update it for FIU restaurants
     const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${city}`;
 
     const apiOptions = {
