@@ -1,24 +1,38 @@
 import React, { useState } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import { TouchableOpacity } from 'react-native'
+import { Linking } from 'react-native';
 
 export default function HeaderTabs(props) {
     return (
-        <View style={{ flexDirection: "row", alignSelf: "center" }}>
-            <HeaderButton 
-                text="Delivery" 
-                btnColor="black" 
-                textColor="white" 
-                activeTab={props.activeTab} 
-                setActiveTab={props.setActiveTab} 
+        <View>
+            <View style={{ flexDirection: "row", alignSelf: "center" }}>
+            <Image
+                style={{ height: 50, width: 100 }}
+                source={require('../../assets/images/fiu.jpg')}
             />
-            <HeaderButton 
-                text="Pickup" 
-                btnColor="white" 
-                textColor="black" 
-                activeTab={props.activeTab} 
-                setActiveTab={props.setActiveTab} 
-            />
+            </View>
+            <View style={{ flexDirection: "row", alignSelf: "center" }}>
+                <Text style={{ color: 'purple'}} onPress={() => Linking.openURL('https://tinyurl.com/42u88mr6')}>
+                    Complete Survey for YumFIU Here! {"\n"}
+                </Text>
+            </View>
+            <View style={{ flexDirection: "row", alignSelf: "center" }}>
+                <HeaderButton 
+                    text="Delivery" 
+                    btnColor="black" 
+                    textColor="white" 
+                    activeTab={props.activeTab} 
+                    setActiveTab={props.setActiveTab} 
+                />
+                <HeaderButton 
+                    text="Pickup" 
+                    btnColor="white" 
+                    textColor="black" 
+                    activeTab={props.activeTab} 
+                    setActiveTab={props.setActiveTab} 
+                />
+            </View>
         </View>
     )
 }

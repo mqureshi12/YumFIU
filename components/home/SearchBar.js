@@ -4,6 +4,7 @@ import {GooglePlacesAutocomplete} from "react-native-google-places-autocomplete"
 import { AntDesign, Ionicons } from '@expo/vector-icons'
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
+import { Linking } from 'react-native';
 import { GOOGLE_PLACES_KEY } from "@env";
 
 export default function SearchBar({cityHandler}) {

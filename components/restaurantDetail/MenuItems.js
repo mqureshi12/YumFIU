@@ -13,6 +13,27 @@ const foods = [
     image:
       "https://www.southernliving.com/thmb/x5xM5QvARl_og39g1jD1N1HfUlA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Extra_Easy_Lasagna_005_16x9-24d8c7469367440bb9aad73e9a83ded9.jpg",
   },
+  {
+    title: "Ramen",
+    description: "Tonkatsu ramen with egg, pork, and fishcakes",
+    price: "$17.50",
+    image:
+      "https://www.foodandwine.com/thmb/0AXGLeY6dYnY8sEXFqxBa8opDrs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Tonkotsu-Ramen-FT-BLOG1122-8fe6c12d609a4fd4ab246bea3aae140e.jpg",
+  },
+  {
+    title: "Tacos",
+    description: "Authentic mexican tacos made today",
+    price: "$10.50",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg",
+  },
+  {
+    title: "Cheeseburger",
+    description: "Classic american cheese, lettuce, tomato and onions",
+    price: "$7.50",
+    image:
+      "https://d9hyo6bif16lx.cloudfront.net/live/img/production/detail/menu/lunch-dinner_555-menu_all-american-cheeseburger-fries.jpg",
+  },
 ];
 
 const styles = StyleSheet.create({
