@@ -17,7 +17,8 @@
    ![](https://docs.github.com/assets/cb-69468/images/help/repository/https-url-clone-cli.png)
 5. Enter the project terminal
 6. run "npm install -g expo-cli"
-7. run "npm run ios -- --reset-cache"
+7. run "npm install"
+8. run "npm run ios -- --reset-cache"
 
 #### Running the Project 
 Have XCode open in the background if it's not your primary IDE
