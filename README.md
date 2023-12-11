@@ -9,12 +9,12 @@
 
 #### Project Setup
 1. Install Node v18.17.1 (or the latest version)
-   [](https://www.edureka.co/blog/content/ver.1554792280/uploads/2019/01/Step-1.png)
+   ![](https://www.edureka.co/blog/content/ver.1554792280/uploads/2019/01/Step-1.png)
 2. Install Xcode
-   [](https://matteomanferdini.com/wp-content/uploads/2022/08/app-store.png.webp)
+   ![](https://matteomanferdini.com/wp-content/uploads/2022/08/app-store.png.webp)
 3. Open xCode once, accept conditions, and run a test project simulator for the iphone 14 pro
 4. Clone repo
-   [](https://docs.github.com/assets/cb-69468/images/help/repository/https-url-clone-cli.png)
+   ![](https://docs.github.com/assets/cb-69468/images/help/repository/https-url-clone-cli.png)
 5. Enter the project terminal
 6. run "npm install -g expo-cli"
 7. run "npm run ios -- --reset-cache"
